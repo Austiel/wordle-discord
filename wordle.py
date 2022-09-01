@@ -13,8 +13,10 @@ block_size = 22 # The size of letter block
 font = ImageFont.truetype("arial.ttf", block_size - 10)
 colors = {'g': (106, 170, 100), 'y': (201, 179, 88), 'b': (120, 124, 126)}
 
-word_list = open('words/words.txt','r').read()
-allowed_words = open('words/allowed_words.txt','r').read()
+with open('words/words.txt','r') as fh1, open('words/allowed_words.txt','r') as fh2:
+    word_list = fh1
+    allowed_words = fh2
+
 curr_word = random.choice(word_list.split()).upper()
 tries = 0
 
