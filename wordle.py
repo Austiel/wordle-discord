@@ -57,7 +57,7 @@ async def wordle(ctx):
         img_size = (0, 5)
         collage = Image.new("RGBA", (block_size * 5 + 20, block_size + 10), (41, 41, 41, 0))
 
-    char_blocks = [] # a list of tuples containing the character and color. Ex. (char, 'g')
+    char_blocks = [] # a list of tuples each containing a character and its color. Ex. (char, 'g')
     char_count = {}
     for indx, char in enumerate(answer):
         if char not in curr_word:
